@@ -8,8 +8,8 @@ public class Emprestimo{
 
     //alunos so podem retirar 3 livros e professores 5 livros.
 
-    public Emprestimo(int idlivro, String loginusuario, LocalDateTime data) {
-        idemprestimo = Biblioteca.getIntIdEmprestimo();
+    public Emprestimo(int idemprestimo, int idlivro, String loginusuario, LocalDateTime data) {
+        this.idemprestimo = idemprestimo;
         this.idlivro = idlivro;
         this.loginusuario = loginusuario;
         this.data = data;

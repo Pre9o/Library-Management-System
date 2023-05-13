@@ -46,6 +46,7 @@ public class EmprestimoDAO extends DAO<Emprestimo, Integer> {
     @Override
     protected Emprestimo readObject(ResultSet rs) throws SQLException {
         return new Emprestimo(
+                rs.getInt("idemprestimo"),
                 rs.getInt("idlivro"),
                 rs.getString("loginusuario"),
                 rs.getTimestamp("data").toLocalDateTime());
