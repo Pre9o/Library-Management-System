@@ -10,7 +10,7 @@ public class UsuarioDAO extends DAO<Usuario, String>{
 
     @Override
     protected String getUpdateSQL() {
-        return "UPDATE usuarios SET login = ?, nome = ?, professor = ?, quantidadedelivros = ? WHERE login = ?";
+        return "UPDATE usuarios SET login = ?, nome = ?, professor = ?, quantidadedelivros = ?, multado = ?, valormulta = ? WHERE login = ?";
     }
 
     @Override
@@ -20,7 +20,7 @@ public class UsuarioDAO extends DAO<Usuario, String>{
 
     @Override
     protected String getCreateSQL() {
-        return "INSERT INTO usuarios (login, nome, professor, quantidadedelivros) VALUES (?, ?, ?, ?)";
+        return "INSERT INTO usuarios (login, nome, professor, quantidadedelivros, multado, valormulta) VALUES (?, ?, ?, ?, ?, ?)";
     }
 
     @Override
@@ -35,6 +35,8 @@ public class UsuarioDAO extends DAO<Usuario, String>{
         stmt.setBoolean(3, usuario.professor);
         stmt.setInt(4, usuario.quantidadeLivros);
         stmt.setString(5, usuario.login);
+        stmt.setBoolean(6, usuario.multado);
+        stmt.setInt(7, usuario.valormulta);
     }
 
     @Override
@@ -43,6 +45,8 @@ public class UsuarioDAO extends DAO<Usuario, String>{
         stmt.setString(2, usuario.nome);
         stmt.setBoolean(3, usuario.professor);
         stmt.setInt(4, usuario.quantidadeLivros);
+        stmt.setBoolean(5, usuario.multado);
+        stmt.setInt(6, usuario.valormulta);
     }
 
     @Override
@@ -51,6 +55,8 @@ public class UsuarioDAO extends DAO<Usuario, String>{
                 rs.getString("nome"),
                 rs.getString("login"),
                 rs.getBoolean("professor"),
-                rs.getInt("quantidadedelivros"));
+                rs.getInt("quantidadedelivros"),
+                rs.getBoolean("multado"),
+                rs.getInt("valormulta"));
     }
 }

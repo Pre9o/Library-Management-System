@@ -7,21 +7,27 @@ public class Menu{
         System.out.println("2 - Cadastrar usuário");
         System.out.println("3 - Emprestar livro");
         System.out.println("4 - Renovar empréstimo");
-        System.out.println("5 - Devolver livro");
-        System.out.println("6 - Reservar livro");
-        System.out.println("7 - Cancelar reserva");
-        System.out.println("8 - Listar livros");
-        System.out.println("9 - Listar usuários");
-        System.out.println("10 - Listar empréstimos");
-        System.out.println("11 - Listar reservas");
-        System.out.println("12 - Sair");
-
+        System.out.println("5 - Buscar empréstimo");
+        System.out.println("6 - Devolver livro");
+        System.out.println("7 - Reservar livro");
+        System.out.println("8 - Buscar usuário");
+        System.out.println("9 - Buscar livro");
+        System.out.println("10 - Alterar livro");
+        System.out.println("11 - Excluir livro");
+        System.out.println("12 - Excluir usuário");
+        System.out.println("13 - Cancelar reserva");
+        System.out.println("14 - Listar livros");
+        System.out.println("15 - Listar usuários");
+        System.out.println("16 - Listar empréstimos");
+        System.out.println("17 - Listar reservas");
+        System.out.println("18 - Pagar multa");
+        System.out.println("19 - Sair");
     }
 
     public static void selecaoMenu(){
         var scanner = new Scanner(System.in);
         var opcao = 0;
-        while (opcao != 11) {
+        while (opcao != 19) {
             opcoesMenu();
             opcao = scanner.nextInt();
             switch (opcao) {
@@ -38,27 +44,48 @@ public class Menu{
                     Biblioteca.renovarEmprestimo();
                     break;
                 case 5:
-                    Biblioteca.realizarDevolucao();
+                    Biblioteca.buscarEmprestimo();
                     break;
                 case 6:
-                    Biblioteca.realizarReserva();
+                    Biblioteca.realizarDevolucao();
                     break;
                 case 7:
-                    Biblioteca.cancelarReserva();
+                    Biblioteca.realizarReserva();
                     break;
                 case 8:
-                    Biblioteca.listarLivros();
+                    Biblioteca.buscarUsuario();
                     break;
                 case 9:
-                    Biblioteca.listarUsuarios();
+                    Biblioteca.buscarLivro();
                     break;
                 case 10:
-                    Biblioteca.listarEmprestimos();
+                    Biblioteca.alterarLivro();
                     break;
                 case 11:
-                    Biblioteca.listarReservas();
+                    Biblioteca.excluirLivro();
                     break;
                 case 12:
+                    Biblioteca.excluirUsuario();
+                    break;
+                case 13:
+                    Biblioteca.cancelarReserva();
+                    break;
+                case 14:
+                    Biblioteca.listarLivros();
+                    break;
+                case 15:
+                    Biblioteca.listarUsuarios();
+                    break;
+                case 16:
+                    Biblioteca.listarEmprestimos();
+                    break;
+                case 17:
+                    Biblioteca.listarReservas();
+                    break;
+                case 18:
+                    Biblioteca.pagarMulta();
+                    break;
+                case 19:
                     sair();
                     break;
                 default:
