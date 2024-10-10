@@ -1,6 +1,6 @@
 # Library Management System
 
-This repository contains a Library Management System developed in Java. The system allows users to manage a library's collection of books, borrowers, and transactions such as book loans and returns. It provides essential functionalities for librarians and users to interact with the library's catalog.
+This repository contains a Library Management System developed in Java during the third semester of the Computer Science course. The system allows users to manage a library's collection of books, borrowers, and transactions such as book loans and returns. It provides essential functionalities for librarians and users to interact with the library's catalog.
 
 ## Features
 - **Book Management**: Add, remove, and update book information (title, author, ISBN, etc.).
